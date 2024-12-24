@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Introducing a new large-scale gold-standard benchmark for instruction-based information extraction in 95+ languages">
+  <meta name="keywords" content="Information Extraction, Cross Lingual Transfer, Multilingual NLP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Massive Instruction Tuning for Multilingual Information Extraction</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+  </div>
+</nav>
+
+
+
+<!-- Author Part -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Massive Instruction Tuning for Multilingual Information Extraction</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <!-- <a>Anonymous Author</a><sup>1</sup>,</span> -->
+              <a>Thang Le</a><sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://huynguyen-hust.github.io">Huy Huu Nguyen</a><sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://tuanluu.github.io">Luu Anh Tuan</a><sup>3</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://ix.cs.uoregon.edu/~thien">Thien Huu Nguyen</a><sup>2</sup></span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>VinAI Research</span>,
+            <span class="author-block"><sup>2</sup>University of Oregon</span> ,
+            <span class="author-block"><sup>3</sup>Nanyang Technological University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Available soon!)</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                 <a
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Available soon!)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">
+          <span class="dnerf">MASSIE</span> - a large-scale instruction tuning benchmark for diverse and reliable evaluation of multilingual information extraction, featuring 5 core tasks and 95+ typologically distinct languages aggregated from 200+ human-annotated datasets.
+        </h2>
+      <img src="images/Main illustration.png" alt="teaser.">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- Results reveal that all experimented models tend to underperform, especially on the relation extraction and event extraction tasks where the best model only achieves less than 20 F1 Score.  -->
+          <p>
+            Recent trends in generative information extraction (IE) have brought forth advancements in developing instruction-following language models that can handle unseen schemas with variable task requirements. However, existing instruction benchmarks for IE are limited in terms of linguistic coverage, mostly featuring monolingual (English) or bilingual data sources (e.g. English and Chinese). To remedy this, we propose MASSIE - a large-scale instruction-based IE benchmarks covering 5 tasks and 95+ languages. Utilizing MASSIE, we conduct experiments on state-of-the-arts multilingual large language models, focusing on in-context learning (where models only have access to few-shot exemplars) and supervised fine-tuning (training with a subset of languages). Overall, we observe significant imbalance in model performance across combinations of tasks and languages, even in highly parallel datasets. Our analyses unveil much rooms for improvements in current instruction-following language models for multilingual IE.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<div class="container is-max-desktop">
+  <!-- Abstract. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">The MASSIE Benchmark</h2>
+      <div class="content has-text-justified">
+        <p>
+        <b>MASSIE</b> (<b>MASS</b>ively multilingual instruction-tuned <b>I</b>nformation <b>E</b>xtraction) is designed to enable rigorous evaluations and advance research on multilingual information extraction (IE) through instruction following.  In particular, MASSIE features 5 extraction tasks across 95+ languages aggregated from 200+ human-annotated datasets. Samples were collected from a variety of domains (e.g. finance, health, entertainment) and contained inputs of various context lengths. In addition, it includes traditionally lesser-focused but essential scenarios such as code-mixing or dialectal variants.
+        </p>
+
+      <p>
+        We construct two versions of MASSIE, namely <b>M-Heavy</b> and <b>M-Light</b>. M-Heavy is a comprehensive benchmark with 17M samples but is typically too large for iterative development due to its sheer size. M-Light is a condensed alternative of M-Heavy through dataset-wise downsampling, containing 2.3M samples while preserving the same number of languages and domains. We encourage users to develop models based on M-Light and only use M-Heavy for final evaluation.
+      </p>
+      <p>
+        <!-- <b>Task distribution</b> -->
+      </p>
+      <img src="images/2pile_600.png">
+      <p>
+        <b>Tree map relative to sample quantity</b>
+      </p>
+         <img src="images/mh_tree_600.png">
+        <p>
+        <b>Soft Evaluation</b>  The standard F1-Score with exact matching does not reveal the difference between partially correct span outputs, while metrics for open-domain text generation (e.g. BLEU, ROUGE) are not structure-aware. Thus, we propose LF1 - a modified metric based on the Levenshtein distance that captures partial correctness while being structure-aware.
+        </p>
+        <img src="images/LF1_Examples.PNG">
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">In-context learning</h2>
+        <div class="content has-text-justified">
+          <p>
+            By default, we randomly sample a set of K=3 exemplars from an English dataset for each task and fix this set in ICL evaluation. Since not every language contains enough samples, this ensures consistent prompts and facilitate language-wise comparison.
+          </p>
+
+          <h3 class="title is-4">Task difficulty aligns with label complexity</h3>
+          <p>
+              Compared to single spans tasks (NER/SF/ED), LLMs achieve much lower results at complex tasks requiring triplets (RE) or hierarchical structures (EE).
+          </p>
+          <img src="images/icl_group1_600.png" alt="">
+          <!-- <ul>
+            <li></li>
+          </ul> -->
+          <h3 class="title is-4">Scaling law remains effective</h3>
+          <p>
+            Of the same architecture, bigger model sizes achieve incrementally better results.
+          </p>
+          <img src="images/model_scale_icl_600.png" alt="">
+          <h3 class="title is-4">Language-specific instructions do not help</h3>
+          <p>
+            Surprisingly, replacing English task-specific instructions with translated variants of the target languages either do not change or even harm models' performance in most cases.
+          </p>
+          <img src="images/language_specific_instruction_icl_600.png" alt="">
+          <h3 class="title is-4">Increasing number of exemplars gives mixed results</h3>
+          <p>
+            Models' performances fluctuates greatly with additional exemplars while not displaying any consistent trend. Often times, using as few as 3 exemplars gives the best results.
+          </p>
+          <img src="images/num_exemplars_vary_icl_600.png" alt="">
+          <h3 class="title is-4">Language-specific exemplars do not scale</h3>
+          <p>
+            Replacing English exemplars with those of the target language does not show any consistent shift in models' performance.
+          </p>
+          <img src="images/language_specific_exemplars_vary_icl_600.png" alt="">
+
+          <h3 class="title is-4">Performance varies significantly among demonstration sets</h3>
+          <img src="images/english_set_icl_600.png" alt="">
+
+          <h3 class="title is-4">Large disparity between language groups</h3>
+          <img src="images/performance_language_icl_300_horizontal.png" alt="">      
+        </div>
+<h2 class="title is-3">Supervised fine-tuning</h2>
+<p>
+  We select 8 languages from <b>M-Light</b> with highest availability to fine-tune models and evaluate on all languages at test time. By default, we use Low-Rank Adaptation (LoRA) with a rank of 64.
+</p>
+<div class="content has-text-justified">
+  <h3 class="title is-4">Instruction tuning with multilingual samples improves both performance and parse rate</h3>
+  <p>
+    While each model benefits at a different rate, we observe strong improvements on all five tasks (even though 90% of evaluated languages were not included in the training set).
+  </p>
+  <img src="images/lora_8B_600.png" alt="">
+
+  <h3 class="title is-4">Scaling laws still hold after fine-tuning</h3>
+  <p>
+    Though less noticeable, fine-tuning with a bigger base model often gives better results, but this only works for stably trained tasks. We discover that the Qwen-2.5 model series often have instabilities with SFT training (despite doing well on ICL), especially on hard tasks such as RE and EE. This phenomenon is easily detected through their extremely low parse rate post-training, and not easily solved with resetting random seeds or detaching task-specific training.
+  </p>
+  <img src="images/lora_qwen_600.png" alt="">
+
+  <h3 class="title is-4">LoRA with budget optimization works better</h3>
+  <p>
+    We evaluate 8 PEFT methods using Llama-3.1-8B-Instruct as the base model. While most methods underperform or only achieve comparable results, AdaLoRA consistently achieve better performance than LoRA on the five tasks.
+  </p>
+  <img src="images/peft_llama3_600.png" alt="">
+</div>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{2024massie,
+  author    = {Le, Thang and Nguyen, Huy Huu and Luu, Anh Tuan and Nguyen, Thien Huu},
+  title     = {Massive Instruction Tuning for Multilingual Information Extraction}
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
